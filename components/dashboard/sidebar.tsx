@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -13,7 +15,7 @@ import {
 
 import { cn } from "@/lib/utils";
 
-const navItems = [
+const navItems: { href: Route; label: string; icon: React.ElementType }[] = [
   { href: "/", label: "Visão Geral", icon: GalleryVerticalEnd },
   { href: "/portfolio", label: "Portfólio de Projetos", icon: BriefcaseBusiness },
   { href: "/metrics", label: "Métricas de Negócio", icon: BarChart3 },
